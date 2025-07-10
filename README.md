@@ -28,6 +28,7 @@ AFRA (Automated Fatwa Research Assistant) is a semantic search tool that uses na
 -Git and GitHub for version control
 
 ##Repository Structure
+'''
 AFRA/
 ├── app/                         #Optional Streamlit frontend interface
 ├── data/                        #JSON/Excel dataset files
@@ -42,6 +43,8 @@ AFRA/
 ├── requirements.txt             #All Python dependencies
 ├── README.md                    #Project overview
 ├── LICENSE                      #Apache 2.0 License
+'''
+---
 
 ##Installation
 To run the project locally:
@@ -52,6 +55,7 @@ cd Semantic-Islamic-Fatwa-Search
 pip install -r requirements.txt
 python scripts/fatwa_search.py
 '''
+---
 
 ##Running The Project
 #Semantic Search
@@ -67,6 +71,7 @@ python scripts/train_model.py
 '''bash
 streamlit run app/app.py
 '''
+---
 
 ##Dataset
 The dataset is sourced from IslamQA. Every entry in merged_fatwas.xlsx includes:
