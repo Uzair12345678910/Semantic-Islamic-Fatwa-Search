@@ -63,6 +63,7 @@ python scripts/fatwa_search.py
 
 
 Running The Project:
+
 #Semantic Search: 
 python scripts/semantic_fatwa_search.py
 
