@@ -2,16 +2,15 @@ import os
 import json
 import pandas as pd
 
-# ✅ Start confirmation
-print("✅ Script started...")
+print("Script started")
 
-# Path to your AFRA folder
+#Below is a path to the folder
 folder_path = "."  # Current directory
 
-# Container for all data
+#Container for data
 all_data = []
 
-# ✅ Loop through JSON files
+#Loop through JSON files
 for filename in os.listdir(folder_path):
     if filename.endswith(".json"):
         try:
@@ -21,12 +20,12 @@ for filename in os.listdir(folder_path):
                     item["topic"] = filename.replace(".json", "").replace("-", " ").title()
                     all_data.append(item)
         except Exception as e:
-            print(f"❌ Error loading {filename}: {e}")
+            print(f"Error loading {filename}: {e}")
 
-# ✅ Convert to DataFrame
+#Convert to DataFrame
 df = pd.DataFrame(all_data)
 
-# ✅ Optional cleanup (ensure column names are clean)
+#Cleanup if needed (ensure column names are clean)
 df.rename(columns={
     'question': 'question',
     'answer': 'answer',
@@ -35,13 +34,13 @@ df.rename(columns={
     # Add more if needed
 }, inplace=True)
 
-# ✅ Save to Excel
+#Save to Excel
 output_file = "merged_fatwas.xlsx"
 try:
     df.to_excel(output_file, index=False)
-    print(f"✅ Merged fatwas saved as '{output_file}'")
+    print(f"Merged fatwas saved as '{output_file}'")
 except Exception as e:
-    print(f"❌ Error saving file: {e}")
+    print(f"Error saving file: {e}")
 
-# ✅ Show files in folder
-print("📂 Files currently in folder:", os.listdir())
+#Show files in folder
+print("Files currently in folder:", os.listdir())
