@@ -54,8 +54,11 @@ Installation:
 To run the project locally (All code is run on bash): 
 
 git clone https://github.com/Uzair12345678910/Semantic-Islamic-Fatwa-Search.git
+
 cd Semantic-Islamic-Fatwa-Search
+
 pip install -r requirements.txt
+
 python scripts/fatwa_search.py
 
 
