@@ -1,9 +1,9 @@
 import pandas as pd
 
-# Load the Excel file
-df = pd.read_excel("merged_fatwas.xlsx")  # or the file you uploaded earlier
+#Load the Excel file
+df = pd.read_excel("merged_fatwas.xlsx")  #also can upload file
 
-# 1. Greet user
+#Greets user first
 gender = input("Are you a man or woman? ").strip().lower()
 if gender == "man":
     print("Salam Ustadh!\n")
@@ -12,22 +12,22 @@ elif gender == "woman":
 else:
     print("Salam!\n")
 
-# 2. Show available topics
+#Then shows available topics from a dropdown list
 unique_topics = df['topic'].dropna().unique()
 print("Available topics:")
 for idx, topic in enumerate(unique_topics, start=1):
     print(f"{idx}. {topic}")
 
-# 3. Let user choose a topic
+#The user can choose a topic
 topic_choice = input("\nEnter the topic name from above: ").strip().lower()
 
-# Filter to that topic
+#Fatwas are then filtered to that selected topic
 df_topic = df[df['topic'].str.lower() == topic_choice]
 
 if df_topic.empty:
     print("No fatwas found for that topic.")
 else:
-    # 4. Ask for keyword search
+    #keyword search
     query = input("\nEnter your question or keyword to search within that topic: ").strip().lower()
 
     matches = df_topic[
