@@ -45,7 +45,7 @@ AFRA/
 ├── LICENSE                      #Apache 2.0 License
 
 Installation
-To run the project locally (All code is run on bash):
+To run the project locally (All code is run on bash): 
 
 git clone https://github.com/Uzair12345678910/Semantic-Islamic-Fatwa-Search.git
 cd Semantic-Islamic-Fatwa-Search
@@ -54,14 +54,14 @@ python scripts/fatwa_search.py
 
 
 Running The Project
-#Semantic Search
+#Semantic Search: 
 python scripts/semantic_fatwa_search.py
 
 
-#Fine Tune The Transformer-Based Model
+#Fine Tune The Transformer-Based Model: 
 python scripts/train_model.py
 
-#Launch On The Streamlit Local Interface
+#Launch On The Streamlit Local Interface: 
 streamlit run app/app.py
 
 Dataset
